@@ -448,6 +448,62 @@
 
 
   
+    <article id="post-原生ajax请求" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/08/20/原生ajax请求/" class="article-date">
+      <time datetime="2016-08-20T04:24:53.000Z" itemprop="datePublished">2016-08-20</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/08/20/原生ajax请求/">原生ajax请求</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="代码"><a href="#代码" class="headerlink" title="##代码"></a>##代码</h2><p>~~~/<em><br> @url string;<br> @type string;<br> @data objest;<br> @success function;
+ </em>/<br>function ajax(url,type,data,success) {<br>    let xhr;<br>    if(window.XMLHttpRequest){<br>        xhr= new XMLHttpRequest();<br>    }else if(window.ActiveXObjest){<br>        xhr = new ActiveXObject(‘Microsoft.XMLHTTP’)<br>    }<br>    xhr.onreadystatechange=function(){<br>        if(xhr.readyState==4 &amp;&amp; xhr.status &gt;=200 &amp;&amp; xhr.status&lt;300){<br>            success(xhr)<br>        }<br>    };<br>    if(type.toLocaleLowerCase()==’get’){<br>        url += (url.indexOf(‘?’)==-1 ? ‘?’ : ‘&amp;’) +formatDatas(data);<br>        xhr.open(‘get’,url);<br>        xhr.send();<br>    }else if(type.toLocaleLowerCase()==’post’){<br>        data=formatDatas(data);<br>        console.log(data);<br>        console.log(url);<br>        xhr.open(‘post’,url);<br>        xhr.setRequestHeader(“Content-type”,”application/x-www-form-urlencoded”);<br>        xhr.send(data)<br>    }<br>}<br>function formatDatas(data) {<br>    let url=’’;<br>    for(var k in data){<br>        let value = data[k] !== undefined ? data[k] :’’;<br>        url +=<code>&amp;${k}=${encodeURIComponent(value)}</code><br>    }<br>    return url ? url.substring(1):’’<br>}</p>
+
+      
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
   
 </div>
       <footer id="footer">

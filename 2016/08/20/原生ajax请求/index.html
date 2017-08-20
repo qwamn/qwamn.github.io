@@ -3,15 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>第一个程序 | Qwan Blog</title>
+  <title>原生ajax请求 | Qwan Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
-<meta property="og:title" content="第一个程序">
-<meta property="og:url" content="http://www.qvian.cn/2017/05/24/第一个程序/index.html">
+  <meta name="description" content="##代码~~~/ @url string; @type string; @data objest; @success function;  /function ajax(url,type,data,success) {    let xhr;    if(window.XMLHttpRequest){        xhr= new XMLHttpRequest();    }else if(wi">
+<meta property="og:type" content="article">
+<meta property="og:title" content="原生ajax请求">
+<meta property="og:url" content="http://www.qvian.cn/2016/08/20/原生ajax请求/index.html">
 <meta property="og:site_name" content="Qwan Blog">
-<meta property="og:updated_time" content="2017-05-24T08:18:56.049Z">
+<meta property="og:description" content="##代码~~~/ @url string; @type string; @data objest; @success function;  /function ajax(url,type,data,success) {    let xhr;    if(window.XMLHttpRequest){        xhr= new XMLHttpRequest();    }else if(wi">
+<meta property="og:updated_time" content="2017-08-20T04:35:39.426Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="第一个程序">
+<meta name="twitter:title" content="原生ajax请求">
+<meta name="twitter:description" content="##代码~~~/ @url string; @type string; @data objest; @success function;  /function ajax(url,type,data,success) {    let xhr;    if(window.XMLHttpRequest){        xhr= new XMLHttpRequest();    }else if(wi">
   
     <link rel="alternative" href="/atom.xml" title="Qwan Blog" type="application/atom+xml">
   
@@ -205,11 +208,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-第一个程序" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-原生ajax请求" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/05/24/第一个程序/" class="article-date">
-      <time datetime="2017-05-24T08:18:56.000Z" itemprop="datePublished">2017-05-24</time>
+      <a href="/2016/08/20/原生ajax请求/" class="article-date">
+      <time datetime="2016-08-20T04:24:53.000Z" itemprop="datePublished">2016-08-20</time>
 </a>
     </div>
   
@@ -222,7 +225,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      第一个程序
+      原生ajax请求
     </h1>
   
 
@@ -239,7 +242,9 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        
+        <h2 id="代码"><a href="#代码" class="headerlink" title="##代码"></a>##代码</h2><p>~~~/<em><br> @url string;<br> @type string;<br> @data objest;<br> @success function;
+ </em>/<br>function ajax(url,type,data,success) {<br>    let xhr;<br>    if(window.XMLHttpRequest){<br>        xhr= new XMLHttpRequest();<br>    }else if(window.ActiveXObjest){<br>        xhr = new ActiveXObject(‘Microsoft.XMLHTTP’)<br>    }<br>    xhr.onreadystatechange=function(){<br>        if(xhr.readyState==4 &amp;&amp; xhr.status &gt;=200 &amp;&amp; xhr.status&lt;300){<br>            success(xhr)<br>        }<br>    };<br>    if(type.toLocaleLowerCase()==’get’){<br>        url += (url.indexOf(‘?’)==-1 ? ‘?’ : ‘&amp;’) +formatDatas(data);<br>        xhr.open(‘get’,url);<br>        xhr.send();<br>    }else if(type.toLocaleLowerCase()==’post’){<br>        data=formatDatas(data);<br>        console.log(data);<br>        console.log(url);<br>        xhr.open(‘post’,url);<br>        xhr.setRequestHeader(“Content-type”,”application/x-www-form-urlencoded”);<br>        xhr.send(data)<br>    }<br>}<br>function formatDatas(data) {<br>    let url=’’;<br>    for(var k in data){<br>        let value = data[k] !== undefined ? data[k] :’’;<br>        url +=<code>&amp;${k}=${encodeURIComponent(value)}</code><br>    }<br>    return url ? url.substring(1):’’<br>}</p>
+
       
       
         <div class="page-reward">
@@ -293,13 +298,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2017/05/24/第一个程序/">第一个程序</a></p>
+        <p><span>本文标题:</span><a href="/2016/08/20/原生ajax请求/">原生ajax请求</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 Qwan 的个人博客">Qwan</a></p>
-        <p><span>发布时间:</span>2017年05月24日 - 16时18分</p>
-        <p><span>最后更新:</span>2017年05月24日 - 16时18分</p>
+        <p><span>发布时间:</span>2016年08月20日 - 12时24分</p>
+        <p><span>最后更新:</span>2017年08月20日 - 12时35分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2017/05/24/第一个程序/" title="第一个程序">http://www.qvian.cn/2017/05/24/第一个程序/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://www.qvian.cn/2017/05/24/第一个程序/　　作者: Qwan" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2016/08/20/原生ajax请求/" title="原生ajax请求">http://www.qvian.cn/2016/08/20/原生ajax请求/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://www.qvian.cn/2016/08/20/原生ajax请求/　　作者: Qwan" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -312,20 +317,15 @@
 
 <nav id="article-nav">
   
-    <a href="/2017/05/31/网站设计命名规则/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/05/24/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          (no title)
+          Hello World
         
       </div>
     </a>
   
-  
-    <a href="/2017/05/24/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello World</div>
-      <strong class="article-nav-caption">></strong>
-    </a>
   
 </nav>
 
@@ -334,7 +334,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#代码"><span class="toc-number">1.</span> <span class="toc-text">##代码</span></a></li></ol>
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
@@ -382,7 +382,7 @@
     
       <div class="duoshuo" id="comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="2017/05/24/第一个程序/" data-title="第一个程序" data-url="http://www.qvian.cn/2017/05/24/第一个程序/"></div>
+    <div class="ds-thread" data-thread-key="2016/08/20/原生ajax请求/" data-title="原生ajax请求" data-url="http://www.qvian.cn/2016/08/20/原生ajax请求/"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
@@ -405,15 +405,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2017/05/31/网站设计命名规则/" title="上一篇: ">
+            <a href="/2017/05/24/hello-world/" title="上一篇: Hello World">
                 <i class="fa fa-angle-left"></i>
             </a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/2017/05/24/hello-world/" title="下一篇: Hello World">
-                <i class="fa fa-angle-right"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
     </div>
     <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/05/31/网站设计命名规则/">网站设计命名规则</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/24/第一个程序/">第一个程序</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/24/hello-world/">Hello World</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/20/原生ajax请求/">原生ajax请求</a></li></ul>
