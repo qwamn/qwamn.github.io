@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>原生ajax请求 | Qwan Blog</title>
+  <title>&#39;原生获取屏幕宽高代码&#39; | Qwan Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="代码 1234567891011121314151617181920212223242526272829303132333435 @url string; @type string; @data objest; @success function;function ajax(url,type,data,success) &amp;#123;    let xhr;    if(window.XMLHttp">
+  <meta name="description" content="获取屏幕宽高的js代码 1234567891011121314151617181920function client()&amp;#123;    if(window.innerWidth!= null)&amp;#123;//ie9以及最新的版本        return&amp;#123;            width:window.innerWidth,            height:window.in">
 <meta property="og:type" content="article">
-<meta property="og:title" content="原生ajax请求">
-<meta property="og:url" content="http://www.qvian.cn/2016/08/20/原生ajax请求/index.html">
+<meta property="og:title" content="&#39;原生获取屏幕宽高代码&#39;">
+<meta property="og:url" content="http://www.qvian.cn/2016/08/28/原生获取屏幕宽高代码/index.html">
 <meta property="og:site_name" content="Qwan Blog">
-<meta property="og:description" content="代码 1234567891011121314151617181920212223242526272829303132333435 @url string; @type string; @data objest; @success function;function ajax(url,type,data,success) &amp;#123;    let xhr;    if(window.XMLHttp">
-<meta property="og:updated_time" content="2017-08-20T06:04:31.043Z">
+<meta property="og:description" content="获取屏幕宽高的js代码 1234567891011121314151617181920function client()&amp;#123;    if(window.innerWidth!= null)&amp;#123;//ie9以及最新的版本        return&amp;#123;            width:window.innerWidth,            height:window.in">
+<meta property="og:updated_time" content="2017-08-22T17:01:50.793Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="原生ajax请求">
-<meta name="twitter:description" content="代码 1234567891011121314151617181920212223242526272829303132333435 @url string; @type string; @data objest; @success function;function ajax(url,type,data,success) &amp;#123;    let xhr;    if(window.XMLHttp">
+<meta name="twitter:title" content="&#39;原生获取屏幕宽高代码&#39;">
+<meta name="twitter:description" content="获取屏幕宽高的js代码 1234567891011121314151617181920function client()&amp;#123;    if(window.innerWidth!= null)&amp;#123;//ie9以及最新的版本        return&amp;#123;            width:window.innerWidth,            height:window.in">
   
     <link rel="alternative" href="/atom.xml" title="Qwan Blog" type="application/atom+xml">
   
@@ -208,11 +208,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-原生ajax请求" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-原生获取屏幕宽高代码" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/08/20/原生ajax请求/" class="article-date">
-      <time datetime="2016-08-20T04:24:53.000Z" itemprop="datePublished">2016-08-20</time>
+      <a href="/2016/08/28/原生获取屏幕宽高代码/" class="article-date">
+      <time datetime="2016-08-28T14:50:10.000Z" itemprop="datePublished">2016-08-28</time>
 </a>
     </div>
   
@@ -225,7 +225,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      原生ajax请求
+      &#39;原生获取屏幕宽高代码&#39;
     </h1>
   
 
@@ -242,8 +242,10 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><hr>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line"> @url string;</div><div class="line"> @type string;</div><div class="line"> @data objest;</div><div class="line"> @success function;</div><div class="line">function ajax(url,type,data,success) &#123;</div><div class="line">    let xhr;</div><div class="line">    if(window.XMLHttpRequest)&#123;</div><div class="line">        xhr= new XMLHttpRequest();</div><div class="line">    &#125;else if(window.ActiveXObjest)&#123;</div><div class="line">        xhr = new ActiveXObject(&apos;Microsoft.XMLHTTP&apos;)</div><div class="line">    &#125;</div><div class="line">    xhr.onreadystatechange=function()&#123;</div><div class="line">        if(xhr.readyState==4 &amp;&amp; xhr.status &gt;=200 &amp;&amp; xhr.status&lt;300)&#123;</div><div class="line">            success(xhr)</div><div class="line">        &#125;</div><div class="line">    &#125;;</div><div class="line">    if(type.toLocaleLowerCase()==&apos;get&apos;)&#123;</div><div class="line">        url += (url.indexOf(&apos;?&apos;)==-1 ? &apos;?&apos; : &apos;&amp;&apos;) +formatDatas(data);</div><div class="line">        xhr.open(&apos;get&apos;,url);</div><div class="line">        xhr.send();</div><div class="line">    &#125;else if(type.toLocaleLowerCase()==&apos;post&apos;)&#123;</div><div class="line">        data=formatDatas(data);</div><div class="line">        xhr.open(&apos;post&apos;,url);</div><div class="line">        xhr.setRequestHeader(&quot;Content-type&quot;,&quot;application/x-www-form-urlencoded&quot;);</div><div class="line">        xhr.send(data)</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">function formatDatas(data) &#123;</div><div class="line">    let url=&apos;&apos;;</div><div class="line">    for(var k in data)&#123;</div><div class="line">        let value = data[k] !== undefined ? data[k] :&apos;&apos;;</div><div class="line">        url +=`&amp;$&#123;k&#125;=$&#123;encodeURIComponent(value)&#125;`</div><div class="line">    &#125;</div><div class="line">    return url ? url.substring(1):&apos;&apos;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+        <h3 id="获取屏幕宽高的js代码"><a href="#获取屏幕宽高的js代码" class="headerlink" title="获取屏幕宽高的js代码"></a>获取屏幕宽高的js代码</h3><hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">function client()&#123;</div><div class="line">    if(window.innerWidth!= null)&#123;//ie9以及最新的版本</div><div class="line">        return&#123;</div><div class="line">            width:window.innerWidth,</div><div class="line">            height:window.innerHeight</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    else if(document.compatMode == &apos;CSS1Compat&apos;)&#123;</div><div class="line">        return&#123;</div><div class="line">            width:document.documentElement.clientWidth,</div><div class="line">            height:document.documentElement.clientHeight</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    else&#123;</div><div class="line">        return &#123;</div><div class="line">            width:document.body.clientWidth,</div><div class="line">            height:document.body.clientHeight</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="调用"><a href="#调用" class="headerlink" title="调用"></a>调用</h3><hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var clientW=client().width //获取屏幕的宽度</div><div class="line">var clientH=client().height //获取滚动的高度</div></pre></td></tr></table></figure>
       
       
         <div class="page-reward">
@@ -297,13 +299,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/08/20/原生ajax请求/">原生ajax请求</a></p>
+        <p><span>本文标题:</span><a href="/2016/08/28/原生获取屏幕宽高代码/">&#39;原生获取屏幕宽高代码&#39;</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 Qwan 的个人博客">Qwan</a></p>
-        <p><span>发布时间:</span>2016年08月20日 - 12时24分</p>
-        <p><span>最后更新:</span>2017年08月20日 - 14时04分</p>
+        <p><span>发布时间:</span>2016年08月28日 - 22时50分</p>
+        <p><span>最后更新:</span>2017年08月23日 - 01时01分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/08/20/原生ajax请求/" title="原生ajax请求">http://www.qvian.cn/2016/08/20/原生ajax请求/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://www.qvian.cn/2016/08/20/原生ajax请求/　　作者: Qwan" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2016/08/28/原生获取屏幕宽高代码/" title="&#39;原生获取屏幕宽高代码&#39;">http://www.qvian.cn/2016/08/28/原生获取屏幕宽高代码/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://www.qvian.cn/2016/08/28/原生获取屏幕宽高代码/　　作者: Qwan" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -316,15 +318,20 @@
 
 <nav id="article-nav">
   
-    <a href="/2016/08/23/原生滚动高度和宽度的代码/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/05/31/网站设计命名规则/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          &#39;原生滚动高度和宽度的代码&#39;
+          (no title)
         
       </div>
     </a>
   
+  
+    <a href="/2016/08/23/原生滚动高度和宽度的代码/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">&#39;原生滚动高度和宽度的代码&#39;</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
   
 </nav>
 
@@ -333,7 +340,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#代码"><span class="toc-number">1.</span> <span class="toc-text">代码</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#获取屏幕宽高的js代码"><span class="toc-number">1.</span> <span class="toc-text">获取屏幕宽高的js代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#调用"><span class="toc-number">2.</span> <span class="toc-text">调用</span></a></li></ol>
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
@@ -381,7 +388,7 @@
     
       <div class="duoshuo" id="comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="2016/08/20/原生ajax请求/" data-title="原生ajax请求" data-url="http://www.qvian.cn/2016/08/20/原生ajax请求/"></div>
+    <div class="ds-thread" data-thread-key="2016/08/28/原生获取屏幕宽高代码/" data-title="&#39;原生获取屏幕宽高代码&#39;" data-url="http://www.qvian.cn/2016/08/28/原生获取屏幕宽高代码/"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
@@ -404,13 +411,15 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/08/23/原生滚动高度和宽度的代码/" title="上一篇: &#39;原生滚动高度和宽度的代码&#39;">
+            <a href="/2017/05/31/网站设计命名规则/" title="上一篇: ">
                 <i class="fa fa-angle-left"></i>
             </a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a href="/2016/08/23/原生滚动高度和宽度的代码/" title="下一篇: &#39;原生滚动高度和宽度的代码&#39;">
+                <i class="fa fa-angle-right"></i>
+            </a>
         
     </div>
     <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/05/31/网站设计命名规则/">网站设计命名规则</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/28/原生获取屏幕宽高代码/">'原生获取屏幕宽高代码'</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/23/原生滚动高度和宽度的代码/">'原生滚动高度和宽度的代码'</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/20/原生ajax请求/">原生ajax请求</a></li></ul>
