@@ -209,6 +209,60 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-移动端rem布局" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/07/23/移动端rem布局/" class="article-date">
+      <time datetime="2017-07-23T08:46:08.000Z" itemprop="datePublished">2017-07-23</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/07/23/移动端rem布局/">移动端rem布局</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h5 id="适用移动端的rem布局源码-转"><a href="#适用移动端的rem布局源码-转" class="headerlink" title="适用移动端的rem布局源码(转)"></a>适用移动端的rem布局源码(转)</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line">&apos;use strict&apos;;</div><div class="line"></div><div class="line">/**</div><div class="line"> * @param &#123;Boolean&#125; [normal = false] - 默认开启页面压缩以使页面高清;  </div><div class="line"> * @param &#123;Number&#125; [baseFontSize = 100] - 基础fontSize, 默认100px;</div><div class="line"> * @param &#123;Number&#125; [fontscale = 1] - 有的业务希望能放大一定比例的字体;</div><div class="line"> */</div><div class="line">const win = window;</div><div class="line">export default win.flex = (normal, baseFontSize, fontscale) =&gt; &#123;</div><div class="line">  const _baseFontSize = baseFontSize || 100;</div><div class="line">  const _fontscale = fontscale || 1;</div><div class="line"></div><div class="line">  const doc = win.document;</div><div class="line">  const ua = navigator.userAgent;</div><div class="line">  const matches = ua.match(/Android[\S\s]+AppleWebkit\/(\d&#123;3&#125;)/i);</div><div class="line">  const UCversion = ua.match(/U3\/((\d+|\.)&#123;5,&#125;)/i);</div><div class="line">  const isUCHd = UCversion &amp;&amp; parseInt(UCversion[1].split(&apos;.&apos;).join(&apos;&apos;), 10) &gt;= 80;</div><div class="line">  const isIos = navigator.appVersion.match(/(iphone|ipad|ipod)/gi);</div><div class="line">  let dpr = win.devicePixelRatio || 1;</div><div class="line">  if (!isIos &amp;&amp; !(matches &amp;&amp; matches[1] &gt; 534) &amp;&amp; !isUCHd) &#123;</div><div class="line">    // 如果非iOS, 非Android4.3以上, 非UC内核, 就不执行高清, dpr设为1;</div><div class="line">    dpr = 1;</div><div class="line">  &#125;</div><div class="line">  const scale = normal ? 1 : 1 / dpr;</div><div class="line"></div><div class="line">  let metaEl = doc.querySelector(&apos;meta[name=&quot;viewport&quot;]&apos;);</div><div class="line">  if (!metaEl) &#123;</div><div class="line">    metaEl = doc.createElement(&apos;meta&apos;);</div><div class="line">    metaEl.setAttribute(&apos;name&apos;, &apos;viewport&apos;);</div><div class="line">    doc.head.appendChild(metaEl);</div><div class="line">  &#125;</div><div class="line">  metaEl.setAttribute(&apos;content&apos;, `width=device-width,user-scalable=no,initial-scale=$&#123;scale&#125;,maximum-scale=$&#123;scale&#125;,minimum-scale=$&#123;scale&#125;`);</div><div class="line">  doc.documentElement.style.fontSize = normal ? &apos;50px&apos; : `$&#123;_baseFontSize / 2 * dpr * _fontscale&#125;px`;</div><div class="line">&#125;;</div><div class="line"></div><div class="line">作者：_minooo_</div><div class="line">链接：http://www.jianshu.com/p/985d26b40199</div><div class="line">來源：简书</div></pre></td></tr></table></figure>
+      
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-网站设计命名规则" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
